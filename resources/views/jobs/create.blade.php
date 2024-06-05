@@ -14,7 +14,7 @@
                 </x-form-field>
                 <x-form-field class="sm:col-span-4">
                     <x-form-label for="salary">Salary</x-form-label>
-                    <x-form-input name="salary" id="salary" placeholder="Example: £50,000"  />
+                    <x-form-input name="salary" id="salary" placeholder="Example: £50,000"/>
                     <x-form-error name='salary'/>
                 </x-form-field>
             </div>

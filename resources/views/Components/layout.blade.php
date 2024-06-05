@@ -14,10 +14,12 @@
     <div class="px-4 py-6 sm:px-6 lg:px-8">
       <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{$heading}}</h1>
     </div>
-    <div class="px-4 py-6 cursor-pointer">
-      <!-- Create Button -->
-      <x-button href="/jobs/create">Create</x-button>
-    </div>
+    <!-- Create Button -->
+    @auth
+      <div class="px-4 py-6 cursor-pointer">
+        <x-button href="/jobs/create">Create</x-button>
+      </div>
+    @endauth
   </header>
   <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">

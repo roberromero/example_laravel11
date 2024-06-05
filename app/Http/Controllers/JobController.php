@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+//FIRST OPTION: use Illuminate\Support\Facades\Gate;
 use App\Models\Job;
 
 class JobController extends Controller
@@ -28,9 +29,10 @@ class JobController extends Controller
         return view('jobs.show', ['job'=> $job]);
     }
     public function edit(Job $job){
-        return view('jobs.edit',[
-            'job' => $job
-        ]);
+        //AUTHORIZATION AT THE CONTROLLER LEVEL:
+        //FIRST OPTION The gate is defined in the AppServiceProvider.php file
+        //FIRST OPTION Gate::authorize('edit-job', $job);
+        return view('jobs.edit',['job' => $job]);
     }
     public function update(Job $job){
         //AUTHORIZE (On hold ...)
